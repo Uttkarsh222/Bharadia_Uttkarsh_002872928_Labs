@@ -40,6 +40,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        userJButton.setBackground(new java.awt.Color(204, 255, 255));
         userJButton.setText("Manage Users");
         userJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +48,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        manageEmployeeJButton.setBackground(new java.awt.Color(255, 204, 204));
         manageEmployeeJButton.setText("Manage Employees");
         manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +56,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        manageOrganizationJButton.setBackground(new java.awt.Color(255, 255, 204));
         manageOrganizationJButton.setText("Manage Organizations");
         manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,19 +65,24 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Administrative Work Area");
+        lblTitle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(275, 275, 275)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(manageEmployeeJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(manageOrganizationJButton)
-                    .addComponent(userJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTitle))
+                    .addComponent(userJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(330, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -83,16 +91,19 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblTitle)
-                .addGap(31, 31, 31)
+                .addGap(42, 42, 42)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
                 .addComponent(manageOrganizationJButton)
                 .addGap(18, 18, 18)
                 .addComponent(manageEmployeeJButton)
                 .addGap(18, 18, 18)
                 .addComponent(userJButton)
-                .addContainerGap())
+                .addContainerGap(93, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblTitle, manageEmployeeJButton, manageOrganizationJButton, userJButton});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed

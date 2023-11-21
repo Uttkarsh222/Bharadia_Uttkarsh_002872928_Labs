@@ -142,6 +142,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
         grpNewUser.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnCreateUser.setBackground(new java.awt.Color(204, 255, 204));
         btnCreateUser.setText("Create");
         btnCreateUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,10 +150,13 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUserName.setText("User Name:");
 
+        lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPassword.setText("Password:");
 
+        lblEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEmployee.setText("Employee:");
 
         cmbEmployee.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -162,6 +166,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblOrganization.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblOrganization.setText("Organization:");
 
         cmbOrganization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -171,11 +176,13 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblRole.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRole.setText("Role:");
 
         cmbRoles.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lblCreateUser.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblCreateUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreateUser.setText("New User:");
 
         javax.swing.GroupLayout grpNewUserLayout = new javax.swing.GroupLayout(grpNewUser);
@@ -183,31 +190,38 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         grpNewUserLayout.setHorizontalGroup(
             grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(grpNewUserLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(grpNewUserLayout.createSequentialGroup()
-                            .addComponent(lblOrganization)
-                            .addGap(18, 18, 18)
-                            .addComponent(cmbOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(grpNewUserLayout.createSequentialGroup()
-                            .addComponent(lblEmployee)
-                            .addGap(18, 18, 18)
-                            .addComponent(cmbEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(grpNewUserLayout.createSequentialGroup()
+                    .addGroup(grpNewUserLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblUserName)
-                                .addComponent(lblRole)
-                                .addComponent(lblPassword))
-                            .addGap(18, 18, 18)
-                            .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cmbRoles, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnCreateUser))))
-                    .addComponent(lblCreateUser))
-                .addContainerGap(142, Short.MAX_VALUE))
+                                .addGroup(grpNewUserLayout.createSequentialGroup()
+                                    .addComponent(lblOrganization)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cmbOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(grpNewUserLayout.createSequentialGroup()
+                                    .addComponent(lblEmployee)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cmbEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(grpNewUserLayout.createSequentialGroup()
+                                    .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblUserName)
+                                        .addComponent(lblRole)
+                                        .addComponent(lblPassword))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cmbRoles, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblCreateUser)))
+                    .addGroup(grpNewUserLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(btnCreateUser, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
+
+        grpNewUserLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblCreateUser, lblEmployee, lblOrganization, lblPassword, lblRole, lblUserName});
+
         grpNewUserLayout.setVerticalGroup(
             grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, grpNewUserLayout.createSequentialGroup()
@@ -232,11 +246,14 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 .addGroup(grpNewUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(btnCreateUser)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
+        grpNewUserLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblCreateUser, lblEmployee, lblOrganization, lblPassword, lblRole, lblUserName});
+
+        btnBack.setBackground(new java.awt.Color(255, 204, 204));
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,7 +262,9 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         });
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Users");
+        lblTitle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblUsersList.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblUsersList.setText("Users List:");
@@ -257,33 +276,33 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUsersList)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUsersList)
+                            .addComponent(btnBack)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(grpNewUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblTitle)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                        .addComponent(grpNewUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(lblTitle))
+                .addGap(17, 17, 17)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(lblUsersList)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblUsersList)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(grpNewUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnBack)
+                        .addGap(46, 46, 46))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(grpNewUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(52, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 

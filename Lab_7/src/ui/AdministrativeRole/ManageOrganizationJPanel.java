@@ -106,6 +106,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             tblOrganizations.getColumnModel().getColumn(1).setResizable(false);
         }
 
+        btnAdd.setBackground(new java.awt.Color(204, 255, 204));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +118,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         lblSelectOrgType.setText("Select Organization Type:");
 
+        btnBack.setBackground(new java.awt.Color(255, 204, 204));
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +127,9 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         });
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Organizations");
+        lblTitle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblOrganizationList.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblOrganizationList.setText("Organization List:");
@@ -138,31 +142,33 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOrganizationAdd)
-                    .addComponent(lblOrganizationList)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(29, 29, 29)
-                        .addComponent(lblTitle))
+                        .addGap(33, 33, 33)
+                        .addComponent(btnBack))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblSelectOrgType)
-                        .addGap(18, 18, 18)
-                        .addComponent(cmbOrganizations, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(275, Short.MAX_VALUE))
+                        .addGap(140, 140, 140)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblOrganizationAdd)
+                            .addComponent(lblOrganizationList)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblSelectOrgType)
+                                .addGap(18, 18, 18)
+                                .addComponent(cmbOrganizations, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(lblTitle))
-                .addGap(32, 32, 32)
+                .addGap(39, 39, 39)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
                 .addComponent(lblOrganizationList)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,7 +179,9 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                     .addComponent(lblSelectOrgType)
                     .addComponent(cmbOrganizations, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdd))
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addComponent(btnBack)
+                .addGap(37, 37, 37))
         );
     }// </editor-fold>//GEN-END:initComponents
 

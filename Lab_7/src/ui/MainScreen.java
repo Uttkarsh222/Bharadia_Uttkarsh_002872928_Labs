@@ -58,6 +58,7 @@ public class MainScreen extends javax.swing.JPanel {
         lblWelcome.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblWelcome.setText("<WelcomeMsg>");
 
+        btnLogOut.setBackground(new java.awt.Color(255, 204, 204));
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
